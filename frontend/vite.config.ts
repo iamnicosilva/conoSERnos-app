@@ -31,4 +31,12 @@ export default defineConfig({
     //   }
     // })
   ],
+  server: {
+    host: true, // Esto exponer la app en la red local (0.0.0.0)
+    strictPort: true,
+    port: 5173,
+    watch: {
+      usePolling: true, // Vital para Hot Reload en Windows con Docker
+    },
+  },
 })
